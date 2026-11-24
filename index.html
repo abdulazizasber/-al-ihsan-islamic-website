@@ -1,374 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>دار الإحسان | Dar Al-Ihsan</title>
-  <style>
-    :root {
-      --bg: #111317;
-      --surface: #1a1d24;
-      --surface-2: #232832;
-      --text: #f3f5f8;
-      --muted: #b0b7c3;
-      --gold: #d4af37;
-      --border: rgba(255, 255, 255, 0.1);
-    }
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071a15"><meta name="google-site-verification" content="pRo85MGdEFXi3504D2O82xW6oZ8dnQq0iWmCYXsFwZE" /><title>دار الإحسان | Islamic Community</title>
+<style>
+:root{--bg:#071a15;--panel:#103126;--gold:#d8b66a;--cream:#f5f0df;--muted:#b8c7bc;--line:#49664f}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#174333,transparent 38%),var(--bg);color:var(--cream);font:16px/1.65 system-ui,sans-serif}a{color:inherit}.wrap{width:min(980px,92%);margin:auto}header{position:sticky;top:0;background:#071a15ed;border-bottom:1px solid var(--line);z-index:2}.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}.brand{color:var(--gold);font-weight:800;text-decoration:none;font-size:20px}.links{display:flex;gap:14px;flex-wrap:wrap}.links a{font-size:13px;text-decoration:none;color:var(--muted)}.toggle{display:none;background:none;color:var(--gold);border:1px solid var(--line);padding:8px;border-radius:8px}.hero{text-align:center;padding:60px 0 35px}.arabic{direction:rtl;font:44px Georgia;color:var(--gold)}h1{font-size:clamp(32px,7vw,56px);line-height:1.15;margin:8px 0}.eyebrow{color:var(--gold);letter-spacing:2px;text-transform:uppercase;font-size:12px}.founder{color:var(--gold);font-weight:650;margin:8px}.muted{color:var(--muted)}.btn{display:inline-block;background:var(--gold);color:#14251c;padding:11px 18px;border-radius:30px;text-decoration:none;font-weight:700;border:0;cursor:pointer}.outline{background:transparent;color:var(--gold);border:1px solid var(--gold)}section{padding:26px 0;scroll-margin-top:80px}.head small{color:var(--gold);letter-spacing:2px;text-transform:uppercase}.head h2{margin:4px 0;font-size:27px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.card{background:linear-gradient(145deg,#12382b,#0b241c);border:1px solid var(--line);border-radius:17px;padding:19px}.card h3{color:var(--gold);margin:0 0 8px}.verse{font:24px/1.8 Georgia;text-align:right;direction:rtl;color:#f5e6bb}.source{font-size:12px;color:#d7c89e}.prayers{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.prayer{background:#09251d;border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px}.prayer b{display:block;color:var(--gold)}.option{display:block;width:100%;text-align:left;margin:8px 0;padding:11px;background:#09251d;color:var(--cream);border:1px solid var(--line);border-radius:10px}.feedback{color:var(--gold);min-height:24px}input{width:100%;padding:11px;background:#061811;color:white;border:1px solid var(--line);border-radius:9px;margin:5px 0 10px}.article{border-bottom:1px solid var(--line);padding:8px 0}footer{border-top:1px solid var(--line);padding:25px 0;text-align:center;color:var(--muted);font-size:13px}
+.menu-wrap{position:relative}.menu-button{background:transparent;color:var(--gold);border:1px solid var(--line);border-radius:10px;font-size:24px;line-height:1;padding:7px 12px;cursor:pointer}.menu-pop{display:none;position:absolute;right:0;top:48px;width:min(290px,86vw);max-height:70vh;overflow:auto;background:#0b241c;border:1px solid var(--gold);border-radius:14px;padding:9px;box-shadow:0 16px 40px #0009;z-index:10}.menu-pop.open{display:block}.menu-pop button{display:block;width:100%;text-align:left;background:transparent;color:var(--cream);border:0;border-radius:9px;padding:10px 12px;cursor:pointer;font:inherit}.menu-pop button:hover{background:#174333;color:var(--gold)}.panel-shade{display:none;position:fixed;inset:0;background:#0009;z-index:20;padding:18px;align-items:center;justify-content:center}.panel-shade.open{display:flex}.panel-box{width:min(560px,100%);max-height:85vh;overflow:auto;background:#0b241c;border:1px solid var(--gold);border-radius:18px;padding:22px;box-shadow:0 20px 60px #000b}.panel-top{display:flex;align-items:center;justify-content:space-between;gap:12px}.panel-top h2{color:var(--gold);margin:0}.panel-close{background:transparent;color:var(--gold);border:1px solid var(--line);border-radius:8px;padding:6px 11px;font-size:20px;cursor:pointer}.panel-box p,.panel-box li{color:var(--muted)}.panel-box a{color:var(--gold)}.panel-box textarea{width:100%;padding:11px;background:#061811;color:white;border:1px solid var(--line);border-radius:9px;margin:5px 0 10px;font:inherit}.panel-note{font-size:13px;color:var(--muted)}
+@media(max-width:680px){.toggle{display:block}.links{display:none;width:100%}.links.open{display:flex}.nav{flex-wrap:wrap}.grid{grid-template-columns:1fr}.prayers{grid-template-columns:repeat(2,1fr)}.prayer:last-child{grid-column:span 2}.hero{padding-top:40px}}
+</style></head><body>
+<header><div class="wrap nav"><a class="brand" href="#home">دار الإحسان</a><button class="toggle" id="toggle">☰</button><nav class="links" id="links"><a href="#hadith">Hadith</a><a href="#quran">Quran</a><a href="#quiz">Quiz</a><a href="#reminders">Reminders</a><a href="#duas">Duas</a><a href="#prayer">Prayer times</a><a href="#articles">Articles</a></nav><div class="menu-wrap"><button class="menu-button" id="moreBtn" aria-label="Open more panels" aria-expanded="false">⋮</button><div class="menu-pop" id="moreMenu"><button data-panel="report">🚩 Report a concern</button><button data-panel="comment">💬 Leave a comment</button><button data-panel="quranPanel">📖 Quran resources</button><button data-panel="hadithPanel">📜 Hadith library</button><button data-panel="seerah">🕌 Seerah</button><button data-panel="trivia">🧠 Trivia</button><button data-panel="announcements">📢 Announcements</button><button data-panel="guidelines">🤝 Community guidelines</button><button data-panel="feedback">✨ Suggestions & feedback</button><button data-panel="about">ℹ️ About Dar Al Ihsan</button></div></div></div></header>
+<div class="panel-shade" id="panelShade" role="dialog" aria-modal="true" aria-labelledby="panelTitle"><div class="panel-box"><div class="panel-top"><h2 id="panelTitle">Panel</h2><button class="panel-close" id="panelClose" aria-label="Close panel">×</button></div><div id="panelBody"></div></div></div>
+<main class="wrap">
+<section class="hero" id="home"><div class="eyebrow">Learn · Reflect · Grow</div><div class="arabic">دار الإحسان</div><h1>Welcome to our Islamic community</h1><p class="founder">Founded by Sahil Muhammad</p><p class="muted">A place to learn, share beneficial knowledge and encourage one another with kindness.</p><a class="btn" href="#reminders">Explore reminders</a> <a class="btn outline" href="#join">Join our Discord</a></section>
+<section id="hadith"><div class="head"><small>Prophetic guidance</small><h2>Daily Hadith</h2></div><div class="card"><h3>Intentions</h3><p class="verse">إِنَّمَا الْأَعْمَالُ بِالنِّيَّاتِ</p><p>“Actions are judged by intentions, and every person will have what they intended.”</p><p class="source">Sahih al-Bukhari 1; Sahih Muslim 1907.</p></div></section>
+<section id="quran"><div class="head"><small>The final revelation</small><h2>Quran</h2></div><div class="grid"><div class="card"><h3>A reminder of ease</h3><p class="verse">فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا</p><p>Surely with hardship comes ease. Surely with hardship comes ease.</p><p class="source">Quran 94:5–6. Translation wording may vary.</p></div><div class="card"><h3>Read the Quran</h3><p class="muted">Explore Arabic text, translations and recitations.</p><a class="btn" href="https://quran.com/" target="_blank" rel="noopener">Open Quran.com ↗</a></div></div></section>
+<section id="quiz"><div class="head"><small>Test your knowledge</small><h2>Islamic Quiz</h2></div><div class="card"><p id="question"></p><div id="options"></div><p class="feedback" id="feedback" aria-live="polite"></p><button class="btn outline" id="next">Next question</button></div></section>
+<section id="reminders"><div class="head"><small>A moment to reflect</small><h2>Daily Reminders</h2></div><div class="grid"><div class="card"><h3>Keep turning back to Allah</h3><p class="muted">Keep making sincere dua, seeking forgiveness and doing good, even on difficult days.</p></div><div class="card"><h3>Good character matters</h3><p class="muted">Speak gently, keep promises and treat people fairly. Let your manners reflect what you learn.</p></div><div class="card"><h3>Small deeds count</h3><p class="muted">A sincere good deed, even when small, is worth doing. Be consistent.</p></div><div class="card"><h3>Make time for Quran</h3><p class="muted">Recite a little, read a reliable translation and reflect on one lesson.</p></div></div></section>
+<section id="duas"><div class="head"><small>Call upon your Lord</small><h2>Duas</h2></div><div class="grid"><div class="card"><h3>Good in this life and the next</h3><p class="verse">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p><p>Our Lord, grant us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.</p><p class="source">Quran 2:201</p></div><div class="card"><h3>Ask for beneficial knowledge</h3><p class="verse">رَبِّ زِدْنِي عِلْمًا</p><p>My Lord, increase me in knowledge.</p><p class="source">Quran 20:114</p></div></div></section>
+<section id="prayer"><div class="head"><small>Daily worship</small><h2>Prayer Times</h2></div><div class="card"><p class="muted">Enter a city to retrieve its prayer timetable. Confirm times with your local mosque.</p><label>City<input id="city" value="Mombasa"></label><label>Country<input id="country" value="Kenya"></label><button class="btn" id="getTimes">Get prayer times</button><p class="feedback" id="status" aria-live="polite"></p><div class="prayers" id="times"><div class="prayer"><b>Fajr</b>—</div><div class="prayer"><b>Dhuhr</b>—</div><div class="prayer"><b>Asr</b>—</div><div class="prayer"><b>Maghrib</b>—</div><div class="prayer"><b>Isha</b>—</div></div><p class="source">Data via AlAdhan API. Calculation settings can differ by location and convention.</p></div></section>
+<section id="articles"><div class="head"><small>Learn and reflect</small><h2>Islamic Articles</h2></div><div class="card"><div class="article"><h3>Why intentions matter</h3><p class="muted">Renew your intention before beginning an action. The hadith on intentions teaches the importance of purpose.</p></div><div class="article"><h3>Building a relationship with Quran</h3><p class="muted">Create a manageable routine: recite, read a reliable translation and reflect on one lesson.</p></div><div class="article"><h3>Good manners online</h3><p class="muted">Avoid insults and rumours. Verify what you share, respect differences in scholarly understanding and keep your words beneficial.</p></div></div></section>
+<section id="join"><div class="head"><small>Our community</small><h2>Join our Discord</h2></div><div class="card"><p class="muted">Join our community on Discord and connect with everyone.</p><a class="btn" id="discord" href="https://discord.com/" target="_blank" rel="noopener">Join دار الإحسان ↗</a></div></section>
+</main><footer><div class="wrap">دار الإحسان · Founded by Sahil Muhammad<br>May Allah grant us beneficial knowledge and righteous deeds.<br>For learning and reminders. Verify religious rulings and quotations with qualified, trusted sources.</div></footer>
+<script>
+document.getElementById('toggle').onclick=()=>document.getElementById('links').classList.toggle('open');
+document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+const moreBtn=document.getElementById('moreBtn'),moreMenu=document.getElementById('moreMenu'),shade=document.getElementById('panelShade'),panelTitle=document.getElementById('panelTitle'),panelBody=document.getElementById('panelBody');
+const panelContent={
+report:['Report a concern',`<p>If you notice harmful, inappropriate or inaccurate content, contact the server moderators on Discord. Include the panel or post name and a clear explanation. Do not share private information publicly.</p><a class="btn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener">Contact moderators on Discord ↗</a><p class="panel-note">This static website does not send reports directly to the admin.</p>`],
+comment:['Leave a comment',`<p>Write a thought or question. This is a local draft only; it does not send or publish your message.</p><label for="commentText">Your comment</label><textarea id="commentText" rows="4" placeholder="Write respectfully..."></textarea><button class="btn" id="copyComment">Copy comment</button><p class="panel-note" id="commentStatus">Paste your comment into the Discord community.</p>`],
+quranPanel:['Quran resources',`<p>Read the Quran in Arabic, explore translations and listen to recitations.</p><p><a href="https://quran.com/" target="_blank" rel="noopener">Open Quran.com ↗</a></p><p><a href="https://tanzil.net/" target="_blank" rel="noopener">Open Tanzil ↗</a></p>`],
+hadithPanel:['Hadith library',`<p>Explore hadith collections and check the collection and reference when sharing narrations.</p><p><a href="https://sunnah.com/" target="_blank" rel="noopener">Explore Sunnah.com ↗</a></p><p class="panel-note">Avoid sharing unsourced quotations; consult qualified scholarship for detailed questions.</p>`],
+seerah:['Seerah of the Prophet ﷺ',`<p>Learn about the life, character and message of Prophet Muhammad ﷺ through carefully sourced learning materials.</p><p><a href="https://yaqeeninstitute.org/" target="_blank" rel="noopener">Explore Yaqeen Institute ↗</a></p>`],
+trivia:['Islamic trivia',`<p>Test your knowledge with the quiz on the main page.</p><a class="btn" href="#quiz" id="goQuiz">Go to Islamic Quiz</a>`],
+announcements:['Announcements',`<p>Welcome to the announcements panel for دار الإحسان.</p><p class="panel-note">New updates will appear here when the site owner adds them.</p><a class="btn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener">Visit our Discord ↗</a>`],
+guidelines:['Community guidelines',`<ul><li>Be respectful and kind to every member.</li><li>Share Islamic information with reliable references.</li><li>Avoid insults, arguments, spam and rumours.</li><li>Respect privacy; never post personal information.</li><li>Ask qualified scholars about religious rulings.</li></ul>`],
+feedback:['Suggestions & feedback',`<p>Have an idea to improve دار الإحسان? Share it with the community moderators.</p><a class="btn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener">Send a suggestion on Discord ↗</a><p class="panel-note">Direct website submissions require a connected form service or backend.</p>`],
+about:['About دار الإحسان',`<p>دار الإحسان is an Islamic learning and community project founded by <strong>Sahil Muhammad</strong>.</p><p>Our aim is to encourage beneficial knowledge, reflection, good character and community.</p><p class="panel-note">Learn · Reflect · Grow</p>`]};
+function closePanel(){shade.classList.remove('open');moreMenu.classList.remove('open');moreBtn.setAttribute('aria-expanded','false')}
+moreBtn.onclick=()=>{const open=moreMenu.classList.toggle('open');moreBtn.setAttribute('aria-expanded',String(open))};
+document.querySelectorAll('[data-panel]').forEach(b=>b.onclick=()=>{const d=panelContent[b.dataset.panel];panelTitle.textContent=d[0];panelBody.innerHTML=d[1];shade.classList.add('open');moreMenu.classList.remove('open');moreBtn.setAttribute('aria-expanded','false');const copy=document.getElementById('copyComment');if(copy)copy.onclick=async()=>{const t=document.getElementById('commentText').value,st=document.getElementById('commentStatus');if(!t.trim()){st.textContent='Write a comment first.';return}try{await navigator.clipboard.writeText(t);st.textContent='Copied. Paste it into Discord to share.'}catch(e){st.textContent='Please select and copy your comment, then paste it into Discord.'}};const q=document.getElementById('goQuiz');if(q)q.onclick=closePanel});
+document.getElementById('panelClose').onclick=closePanel;shade.onclick=e=>{if(e.target===shade)closePanel()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closePanel()});
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(17, 19, 23, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .topbar-inner {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .brand {
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--gold);
-    }
-
-    .top-nav {
-      display: none;
-      flex-wrap: wrap;
-      gap: 14px;
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-
-    .top-nav a:hover {
-      color: var(--gold);
-    }
-
-    @media (min-width: 860px) {
-      .top-nav {
-        display: flex;
-      }
-    }
-
-    .menu-btn {
-      background: var(--surface-2);
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    .drawer-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.65);
-      z-index: 90;
-      display: none;
-    }
-
-    .drawer-backdrop.open {
-      display: block;
-    }
-
-    .drawer {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: min(320px, 88vw);
-      height: 100vh;
-      background: var(--surface);
-      border-left: 1px solid var(--border);
-      z-index: 100;
-      padding: 20px;
-      overflow-y: auto;
-      transform: translateX(100%);
-      transition: transform 0.22s ease;
-    }
-
-    .drawer.open {
-      transform: translateX(0);
-    }
-
-    .drawer-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 18px;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .close-btn {
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 4px 10px;
-      font-size: 1rem;
-      cursor: pointer;
-    }
-
-    .drawer-group-title {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gold);
-      margin: 16px 0 8px;
-    }
-
-    .drawer-list {
-      list-style: none;
-      display: grid;
-      gap: 6px;
-    }
-
-    .drawer-list a {
-      display: block;
-      padding: 8px 10px;
-      border-radius: 8px;
-      background: var(--surface-2);
-      font-size: 0.95rem;
-    }
-
-    .drawer-list a:hover {
-      outline: 1px solid var(--gold);
-    }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 28px 18px 64px;
-      display: grid;
-      gap: 24px;
-    }
-
-    .hero {
-      background: linear-gradient(145deg, var(--surface), var(--surface-2));
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 22px;
-    }
-
-    .eyebrow {
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .hero h1 {
-      font-size: clamp(1.6rem, 4vw, 2.4rem);
-      margin-bottom: 10px;
-    }
-
-    .founder {
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 65ch;
-      margin-bottom: 20px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 10px 16px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid var(--border);
-      cursor: pointer;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: #111317;
-      border-color: var(--gold);
-    }
-
-    .btn-secondary {
-      background: var(--surface-2);
-      color: var(--text);
-    }
-
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 22px;
-    }
-
-    .panel-tag {
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-
-    .panel h2 {
-      font-size: 1.4rem;
-      margin-bottom: 14px;
-    }
-
-    .card {
-      background: var(--surface-2);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 12px;
-    }
-
-    .card h3 {
-      font-size: 1.08rem;
-      margin-bottom: 8px;
-      color: var(--gold);
-    }
-
-    .arabic {
-      font-size: 1.35rem;
-      line-height: 2;
-      text-align: right;
-      margin-bottom: 8px;
-      direction: rtl;
-    }
-
-    .quote {
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-
-    .meta {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.9rem;
-      color: var(--gold);
-    }
-
-    .quiz-options {
-      display: grid;
-      gap: 10px;
-      margin: 14px 0;
-    }
-
-    .quiz-option {
-      text-align: left;
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: var(--bg);
-      color: var(--text);
-      border: 1px solid var(--border);
-      cursor: pointer;
-      font-size: 0.95rem;
-    }
-
-    .quiz-option:hover {
-      border-color: var(--gold);
-    }
-
-    .quiz-feedback {
-      min-height: 24px;
-      margin: 10px 0 14px;
-      font-size: 0.95rem;
-      color: var(--gold);
-    }
-  </style>
-</head>
-<body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="#home" class="brand">دار الإحسان</a>
-      <nav class="top-nav" aria-label="Main Navigation">
-        <a href="#home">Home</a>
-        <a href="#hadith-panel">Hadith</a>
-        <a href="#quran-panel">Qur'an</a>
-        <a href="#quiz-panel">Quiz</a>
-        <a href="#seerah-panel">Seerah</a>
-        <a href="#fiqh-panel">Fiqh</a>
-        <a href="#reminders-panel">Reminders</a>
-        <a href="#duas-panel">Duas</a>
-        <a href="#prayer-times-panel">Prayer Times</a>
-        <a href="#articles-panel">Articles</a>
-      </nav>
-      <button type="button" id="menuToggleBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">☰</button>
-    </div>
-  </header>
-
-  <div id="drawerBackdrop" class="drawer-backdrop"></div>
-
-  <aside id="navDrawer" class="drawer" aria-label="Site Drawer">
-    <div class="drawer-header">
-      <span class="brand">دار الإحسان</span>
-      <button type="button" id="drawerCloseBtn" class="close-btn" aria-label="Close menu">✕</button>
-    </div>
-
-    <div class="drawer-group-title">Knowledge Panels</div>
-    <ul class="drawer-list">
-      <li><a href="#home">🏠 Home</a></li>
-      <li><a href="#quran-panel">📖 Qur'an Panel</a></li>
-      <li><a href="#hadith-panel">📜 Hadith Panel</a></li>
-      <li><a href="#quiz-panel">🧠 Islamic Quiz</a></li>
-      <li><a href="#seerah-panel">🕌 Seerah Panel</a></li>
-      <li><a href="#fiqh-panel">⚖️ Fiqh Panel</a></li>
-    </ul>
-
-    <div class="drawer-group-title">Daily &amp; Community</div>
-    <ul class="drawer-list">
-      <li><a href="#reminders-panel">✨ Reminders</a></li>
-      <li><a href="#duas-panel">🤲 Daily Duas</a></li>
-      <li><a href="#prayer-times-panel">🕰️ Prayer Times</a></li>
-      <li><a href="#articles-panel">📝 Articles</a></li>
-    </ul>
-
-    <div class="drawer-group-title">Support &amp; Team</div>
-    <ul class="drawer-list">
-      <li><a href="#help-panel">📩 Help &amp; Contact</a></li>
-      <li><a
-        
+const qs=[['Which month do Muslims fast in?',['Muharram','Ramadan','Shawwal','Safar'],1,'Muslims observe the obligatory fast during Ramadan.'],['How many daily obligatory prayers are there?',['Three','Four','Five','Six'],2,'There are five daily obligatory prayers.'],['Which is the first chapter of the Quran?',['Al-Fatihah','Al-Baqarah','Al-Ikhlas','An-Nas'],0,'Surah Al-Fatihah is the opening chapter of the Quran.'],['What is the night described as better than a thousand months?',['Laylat al-Miraj','Laylat al-Qadr','Friday night','Eid night'],1,'Laylat al-Qadr is described in Surah Al-Qadr as better than a thousand months.']];
+let qi=0;function showQ(){let q=qs[qi];document.getElementById('question').textContent=q[0];document.getElementById('feedback').textContent='';let box=document.getElementById('options');box.innerHTML='';q[1].forEach((v,i)=>{let b=document.createElement('button');b.className='option';b.textContent=v;b.onclick=()=>{document.getElementById('feedback').textContent=(i===q[2]?'Correct. ':'Not quite. ')+q[3];[...box.children].forEach(x=>x.disabled=true)};box.appendChild(b)})}document.getElementById('next').onclick=()=>{qi=(qi+1)%qs.length;showQ()};showQ();
+document.getElementById('getTimes').onclick=async()=>{let c=document.getElementById('city').value.trim(),k=document.getElementById('country').value.trim(),s=document.getElementById('status');if(!c||!k){s.textContent='Enter both a city and country.';return}s.textContent='Loading…';try{let r=await fetch('https://api.aladhan.com/v1/timingsByCity?city='+encodeURIComponent(c)+'&country='+encodeURIComponent(k)+'&method=3'),j=await r.json();if(j.code!==200)throw Error();let t=j.data.timings;document.getElementById('times').innerHTML=['Fajr','Dhuhr','Asr','Maghrib','Isha'].map(n=>'<div class="prayer"><b>'+n+'</b>'+String(t[n]).slice(0,5)+'</div>').join('');s.textContent='Times for '+c+', '+k+' · '+j.data.date.readable}catch(e){s.textContent='Could not load times. Check the spelling and connection, or consult your local mosque.'}};
+/* Replace this placeholder with your own Discord invite URL before publishing. */
+const DISCORD_INVITE='https://discord.gg/HYpjBD6cV';document.getElementById('discord').href=DISCORD_INVITE;
+</script></body></html>
