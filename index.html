@@ -43,15 +43,21 @@
     <div class="grid">
       <article class="card"><div class="symbol">۞</div><h3 data-ar="القرآن الكريم" data-en="The Holy Quran">القرآن الكريم</h3><p data-ar="تصفّح السور والآيات وتدبّر كلام الله." data-en="Browse surahs and verses and reflect on the words of Allah.">تصفّح السور والآيات وتدبّر كلام الله.</p><a class="smallbtn" href="#quran" data-ar="افتح القرآن" data-en="Open Quran">افتح القرآن</a></article>
       <article class="card"><div class="symbol">☾</div><h3 data-ar="الأذكار والأدعية" data-en="Adhkar & Duas">الأذكار والأدعية</h3><p data-ar="أذكار الصباح والمساء وأدعية مختارة." data-en="Morning and evening remembrance and selected duas.">أذكار الصباح والمساء وأدعية مختارة.</p><a class="smallbtn" href="#adhkar" data-ar="اقرأ الأذكار" data-en="Read adhkar">اقرأ الأذكار</a></article>
-      <article class="card"><div class="symbol">◷</div><h3 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h3><p data-ar="اعرف مواقيت الصلاة اليومية لمدينة مومباسا." data-en="View daily prayer times for Mombasa.">اعرف مواقيت الصلاة اليومية لمدينة مومباسا.</p><a class="smallbtn" href="#prayer" data-ar="عرض المواقيت" data-en="View times">عرض المواقيت</a></article>
+      <article class="card"><div class="symbol">◷</div><h3 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h3><p data-ar="اختر بلدك ومدينتك لمعرفة مواقيت الصلاة." data-en="Choose your country and city to view prayer times.">اختر بلدك ومدينتك لمعرفة مواقيت الصلاة.</p><a class="smallbtn" href="#prayer" data-ar="عرض المواقيت" data-en="View times">عرض المواقيت</a></article>
       <article class="card"><div class="symbol">✧</div><h3 data-ar="الحديث النبوي" data-en="Hadith">الحديث النبوي</h3><p data-ar="تعرّف على أحاديث النبي ﷺ ومصادرها." data-en="Explore sayings of Prophet Muhammad ﷺ and their sources.">تعرّف على أحاديث النبي ﷺ ومصادرها.</p><p class="muted" data-ar="سيُضاف مكتبة الأحاديث في تحديث قادم." data-en="The hadith library is planned for a future update.">سيُضاف مكتبة الأحاديث في تحديث قادم.</p></article>
       <article class="card"><div class="symbol">✦</div><h3 data-ar="التعلّم والاختبارات" data-en="Learning & Quizzes">التعلّم والاختبارات</h3><p data-ar="اختبر معلوماتك الإسلامية وتعلّم كل يوم." data-en="Test your Islamic knowledge and learn every day.">اختبر معلوماتك الإسلامية وتعلّم كل يوم.</p><a class="smallbtn" href="#quiz" data-ar="ابدأ الاختبار" data-en="Start quiz">ابدأ الاختبار</a></article>
       <article class="card"><div class="symbol">♧</div><h3 data-ar="مجتمعنا" data-en="Our Community">مجتمعنا</h3><p data-ar="كن جزءًا من مجتمع يجمعنا على الخير." data-en="Be part of a community united in goodness.">كن جزءًا من مجتمع يجمعنا على الخير.</p><a class="smallbtn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener" data-ar="انضم إلى Discord" data-en="Join Discord">انضم إلى Discord</a></article>
     </div>
   </section>
-  <section class="wrap section" id="prayer"><div class="section-head"><h2 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h2><p data-ar="مومباسا، كينيا · قد تختلف المواقيت بحسب طريقة الحساب" data-en="Mombasa, Kenya · Times may vary by calculation method">مومباسا، كينيا · قد تختلف المواقيت بحسب طريقة الحساب</p></div>
+  <section class="wrap section" id="prayer"><div class="section-head"><h2 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h2><p data-ar="اختر موقعك لعرض المواقيت المحلية · قد تختلف بحسب طريقة الحساب" data-en="Choose your location for local times · Results may vary by calculation method">اختر موقعك لعرض المواقيت المحلية · قد تختلف بحسب طريقة الحساب</p></div>
+    <div class="card" style="margin-bottom:15px"><div class="row">
+      <label for="prayerCity" data-ar="المدينة" data-en="City">المدينة</label><input id="prayerCity" type="text" value="Mombasa" autocomplete="address-level2" placeholder="City">
+      <label for="prayerCountry" data-ar="الدولة" data-en="Country">الدولة</label><input id="prayerCountry" type="text" value="Kenya" autocomplete="country-name" placeholder="Country">
+      <button class="btn" id="chooseLocation" data-ar="تحديث المواقيت" data-en="Update times">تحديث المواقيت</button>
+      <button class="smallbtn" id="detectLocation" data-ar="استخدم موقعي" data-en="Use my location">استخدم موقعي</button>
+    </div><p class="muted" data-ar="أدخل اسم المدينة والدولة بالإنجليزية للحصول على نتيجة أدق، أو اسمح للمتصفح باستخدام موقعك. لا يتم حفظ موقعك الدقيق." data-en="Enter your city and country in English for best results, or allow your browser to use your location. Your precise location is not stored.">أدخل اسم المدينة والدولة بالإنجليزية للحصول على نتيجة أدق، أو اسمح للمتصفح باستخدام موقعك. لا يتم حفظ موقعك الدقيق.</p></div>
     <div class="prayers" id="prayerTimes"><div class="prayer"><b>الفجر</b><span>—</span></div><div class="prayer"><b>الشروق</b><span>—</span></div><div class="prayer"><b>الظهر</b><span>—</span></div><div class="prayer"><b>العصر</b><span>—</span></div><div class="prayer"><b>المغرب</b><span>—</span></div><div class="prayer"><b>العشاء</b><span>—</span></div></div>
-    <p class="muted center" id="prayerStatus" data-ar="جارٍ تحميل المواقيت..." data-en="Loading prayer times...">جارٍ تحميل المواقيت...</p>
+    <p class="muted center" id="prayerStatus" aria-live="polite" data-ar="جارٍ تحميل المواقيت..." data-en="Loading prayer times...">جارٍ تحميل المواقيت...</p>
   </section>
   <section class="wrap section" id="quran"><div class="section-head"><h2 data-ar="القرآن الكريم" data-en="The Holy Quran">القرآن الكريم</h2><p data-ar="اختر سورة لعرض آياتها باللغة العربية." data-en="Choose a surah to view its Arabic verses.">اختر سورة لعرض آياتها باللغة العربية.</p></div>
     <div class="card"><div class="row"><select id="surahSelect" aria-label="Choose surah"><option value="1">الفاتحة</option></select><button class="btn" id="loadSurah" data-ar="عرض السورة" data-en="Load surah">عرض السورة</button></div><div id="quranResult" class="panel result">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div><p class="muted" data-ar="النص القرآني يُحمّل من واجهة AlQuran Cloud عند توفر الاتصال." data-en="Quran text loads from AlQuran Cloud when an internet connection is available.">النص القرآني يُحمّل من واجهة AlQuran Cloud عند توفر الاتصال.</p></div>
@@ -90,10 +96,16 @@
   async function loadSurah(){const out=document.getElementById('quranResult');out.textContent=lang==='ar'?'جارٍ تحميل السورة...':'Loading surah...';try{const res=await fetch('https://api.alquran.cloud/v1/surah/'+select.value);if(!res.ok)throw new Error('network');const json=await res.json();out.textContent=json.data.ayahs.map(a=>a.text+' ۞').join('\n');}catch(e){out.textContent=lang==='ar'?'تعذّر تحميل السورة. تحقق من اتصال الإنترنت وحاول مرة أخرى.':'Could not load the surah. Check your internet connection and try again.';}}
   document.getElementById('loadSurah').addEventListener('click',loadSurah);
 
-  async function loadPrayer(){const status=document.getElementById('prayerStatus');try{const d=new Date();const url=`https://api.aladhan.com/v1/timings/${Math.floor(d.getTime()/1000)}?latitude=-4.0435&longitude=39.6682&method=3`;const res=await fetch(url);if(!res.ok)throw new Error('network');const json=await res.json();const t=json.data.timings;const items=[['الفجر','Fajr'],['الشروق','Sunrise'],['الظهر','Dhuhr'],['العصر','Asr'],['المغرب','Maghrib'],['العشاء','Isha']];document.getElementById('prayerTimes').innerHTML=items.map(([ar,en])=>`<div class="prayer"><b>${lang==='ar'?ar:en}</b><span>${t[en]}</span></div>`).join('');status.textContent=lang==='ar'?'المواقيت التقريبية لمدينة مومباسا. يُرجى التأكد من الجهة المحلية المعتمدة.':'Approximate times for Mombasa. Please verify with your local mosque.';}catch(e){status.textContent=lang==='ar'?'تعذّر تحميل المواقيت.':'Could not load prayer times.';}}
-  loadPrayer();
-})();
-</script>
-</body>
-                                                                                                                                                                                                                                                                                                                                                                              </html>
-    
+  const cityInput=document.getElementById('prayerCity'), countryInput=document.getElementById('prayerCountry');
+  const prayerStatus=document.getElementById('prayerStatus');
+  function prayerMessage(ar,en){prayerStatus.textContent=lang==='ar'?ar:en;}
+  async function renderPrayerTimes(url, placeLabel){
+    prayerMessage('جارٍ تحميل المواقيت...','Loading prayer times...');
+    try{
+      const res=await fetch(url); if(!res.ok) throw new Error('network');
+      const json=await res.json(); if(json.code!==200 || !json.data?.timings) throw new Error('no timings');
+      const t=json.data.timings;
+      const items=[['الفجر','Fajr'],['الشروق','Sunrise'],['الظهر','Dhuhr'],['العصر','Asr'],['المغرب','Maghrib'],['العشاء','Isha']];
+      document.getElementById('prayerTimes').innerHTML=items.map(([ar,en])=>`<div class="prayer"><b>${lang==='ar'?ar:en}</b><span>${t[en]}</span></div>`).join('');
+      prayerMessage((`المواقيت المعروضة لـ ${placeLabel}. يُرجى التأكد من الجهة المحلية المعتمدة.`),`Prayer times for ${placeLabel}. Please verify with your local mosque.`);
+    }catch(e){prayerMessage('تعذّر تحميل المواقيت. تحقق من كتابة المدينة والدولة وحاول مرة أخرى.','Could not load prayer times. Check the ci
